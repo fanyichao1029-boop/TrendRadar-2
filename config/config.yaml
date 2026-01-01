@@ -38,8 +38,6 @@ platforms:
     name: "雪球"
   - id: "jin10"
     name: "金十数据"
-  - id: "fastbull"
-    name: "快讯通"
   - id: "toutiao"
     name: "今日头条"
   - id: "douyin"
@@ -57,7 +55,7 @@ platforms:
 # max_age_days: 可选，覆盖全局 freshness_filter.max_age_days
 # ===============================================================
 rss:
-  enabled: true                       # 是否启用 RSS 抓取
+  enabled: false                       # 是否启用 RSS 抓取
 
   # 文章新鲜度过滤配置（全局默认值）
   # 过滤掉发布时间超过指定天数的旧文章，避免同一篇文章重复出现在推送中
@@ -118,11 +116,11 @@ rss:
 # ===============================================================
 report:
   mode: "current"                     # 可选: daily | current | incremental
-  display_mode: "platform"             # 可选: keyword | platform
+  display_mode: "keyword"             # 可选: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
   rank_threshold: 5                   # 排名高亮阈值
-  sort_by_position_first: false       # true=按配置位置排序，false=按热点条数排序
+  sort_by_position_first: true       # true=按配置位置排序，false=按热点条数排序
   max_news_per_keyword: 0             # 每个关键词最大显示数量（0=不限制）
   reverse_content_order: false        # false=热点词汇统计在前，true=新增热点新闻在前
 
